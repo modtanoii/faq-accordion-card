@@ -1,20 +1,87 @@
 .main {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    overflow: hidden;
 }
 
 .left {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     width: 50%;
+
     background-image: url('../assets/bg-pattern-desktop.svg');
 }
 
 .left img {
-
+    width: 100%;
 }
 
 .right {
+    margin: 4rem;
     width: 50%;
     font-size: 12px;
+    
+}
+
+.right h2 {
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.faq {
+    cursor: pointer;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.faq.active .question {
+    font-weight: 700;
+}
+
+.question {
+    font-weight: 400;
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.answer {
+    margin-top: ;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.5s ease;
+}
+
+.answer p {
+    padding-top: 0.5rem;
+    line-height: 1.6;
+}
+
+.faq.active .answer {
+    max-height: 300px;
+    animation: fade 1s ease-in-out;
+}
+
+.faq.active svg {
+    transform: rotate(180deg);
+}
+
+svg {
+    transition: transform 0.5s ease-in;
+}
+
+@keyframes fade {
+    from {
+        opacity:0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity:1;
+        transform: translateY(0px);
+    }
+}
+
+h3:hover {
+    color: hsl(14, 88%, 65%);
 }
