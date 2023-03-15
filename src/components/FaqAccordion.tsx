@@ -1,16 +1,19 @@
-import Card from './Card'
-import BoxImg from '../assets/illustration-box-desktop.svg'
-import WomanOnline from '../assets/illustration-woman-online-desktop.svg'
-import BGDesktop from '../assets/bg-pattern-desktop.svg'
-import './FaqAccordion.css'
+import Card from './Card';
+import BoxImg from '../assets/illustration-box-desktop.svg';
+import WomanOnline from '../assets/illustration-woman-online-desktop.svg';
+import BGDesktop from '../assets/bg-pattern-desktop.svg';
+import './FaqAccordion.css';
 
-export const faqs = document.querySelectorAll(".faq");
+function Accordion() {
+const faqs = document.querySelectorAll('.faq')
 
-faqs.forEach(faq => {
-  faq.addEventListener("click", () => {
-    faq.classList.toggle("active");
+faqs.forEach((faq) => {
+  faq.addEventListener('click', () => {
+    faq.classList.toggle('active')
   })
 })
+
+}
 
 function FaqAccordion() {
   return (
