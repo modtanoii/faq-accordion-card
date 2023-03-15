@@ -1,10 +1,12 @@
 import Card from './Card'
-import WomanImg from '../assets/illustration-woman-online-desktop.svg'
+import BoxImg from '../assets/illustration-box-desktop.svg'
+import WomanOnline from '../assets/illustration-woman-online-desktop.svg'
+import BGDesktop from '../assets/bg-pattern-desktop.svg'
 import './FaqAccordion.css'
 
 export const faqs = document.querySelectorAll(".faq");
 
-faqs.forEach(faq => {
+faqs.forEach((faq) => {
   faq.addEventListener("click", () => {
     faq.classList.toggle("active");
   })
@@ -13,15 +15,17 @@ faqs.forEach(faq => {
 function FaqAccordion() {
   return (
     <Card>
-        <div className="main">
+        <main className="main">
             <div className="left">
-                <img src={WomanImg} alt="" />
+              <div className="bg"><img src={BGDesktop} alt="" /></div>
+              <div className="woman-online"><img src={WomanOnline} alt="" /></div>
             </div>
+            <div className="box"><img src={BoxImg} alt="" /></div>
             <div className="right">
               <h2>FAQ</h2>
               <div className="faq">
                 <div className="question">
-                  <h3>How many team members can I invite?</h3>
+                  <p>How many team members can I invite?</p>
                   <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
                 </div>
                 <div className="answer">
@@ -32,7 +36,7 @@ function FaqAccordion() {
 
               <div className="faq">
                 <div className="question">
-                  <h3>What is the maximum file upload size?</h3>
+                  <p>What is the maximum file upload size?</p>
                   <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
                 </div>
                 <div className="answer">
@@ -42,7 +46,7 @@ function FaqAccordion() {
 
               <div className="faq">
                 <div className="question">
-                  <h3>How do I reset my password?</h3>
+                  <p>How do I reset my password?</p>
                   <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
                 </div>
                 <div className="answer">
@@ -53,7 +57,7 @@ function FaqAccordion() {
 
               <div className="faq">
                 <div className="question">
-                  <h3>Can I cancel my subscription?</h3>
+                  <p>Can I cancel my subscription?</p>
                   <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
                 </div>
                 <div className="answer">
@@ -63,7 +67,7 @@ function FaqAccordion() {
 
               <div className="faq">
                 <div className="question">
-                  <h3>Do you provide additional support?</h3>
+                  <p>Do you provide additional support?</p>
                   <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
                 </div>
                 <div className="answer">
@@ -71,7 +75,7 @@ function FaqAccordion() {
                 </div>
               </div>
             </div>
-        </div>
+        </main>
     </Card>
   )
 }
